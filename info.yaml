@@ -23,7 +23,7 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "data_in1"
+  ui[0]: "ui_in"
   ui[1]: "data_in2"
   ui[2]: "data_in3"
   ui[3]: "data_in4"
@@ -33,7 +33,7 @@ pinout:
   ui[7]: "ena"
 
   # Outputs
-  uo[0]: "data_out1"
+  uo[0]: "uo_out"
   uo[1]: "data_out2"
   uo[2]: "data_out3"
   uo[3]: "data_out4"

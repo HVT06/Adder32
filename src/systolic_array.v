@@ -1,7 +1,7 @@
 `include "PE.v"
 
 
-module tt_um_systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, clk, clear, ena, rst_n, data_out1, data_out2, data_out3, data_out4, data_out5);
+module systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, clk, clear, data_out1, data_out2, data_out3, data_out4, data_out5);
   
   parameter zero_input = 16'b0000000000000000;
   input [7:0] data_in1;
@@ -9,7 +9,7 @@ module tt_um_systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, cl
   input [7:0] data_in3;
   input [7:0] data_in4;
   input [7:0] data_in5;
-  input clk, clear, ena, rst_n;
+  input clk, clear;
 
   output  [15:0] data_out1;
   output  [15:0] data_out2;

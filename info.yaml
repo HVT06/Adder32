@@ -29,8 +29,8 @@ pinout:
   ui[3]: "data_in4"
   ui[4]: "data_in5"
   ui[5]: "clk"
-  ui[6]: "clear"
-  ui[7]: ""
+  ui[6]: "rst_n"
+  ui[7]: "clear"
 
   # Outputs
   uo[0]: "data_out1"

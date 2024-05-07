@@ -16,7 +16,10 @@ project:
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
     - "systolic_array.v"
-
+    - "PE.v"
+    - "adder.v"
+    - "cpa.v"
+    - "wallace.v"
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs

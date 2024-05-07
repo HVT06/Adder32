@@ -9,7 +9,7 @@ module tt_um_systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, cl
   input [7:0] data_in3;
   input [7:0] data_in4;
   input [7:0] data_in5;
-  input clk, clear;
+  input clk, clear, ena;
 
   output  [15:0] data_out1;
   output  [15:0] data_out2;

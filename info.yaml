@@ -31,6 +31,7 @@ pinout:
   ui[5]: "clk"
   ui[6]: "clear"
   ui[7]: "ena"
+  ui[8]: "rst_n"
 
   # Outputs
   uo[0]: "data_out1"

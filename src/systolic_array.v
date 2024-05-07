@@ -1,17 +1,17 @@
 `include "PE.v"
 
 
-module tt_um_systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, clk, rst_n, ena,clear ,data_out1, data_out2, data_out3, data_out4, data_out5);
+module tt_um_systolic_array(ui_in, data_in2, data_in3, data_in4, data_in5, clk, rst_n, ena,clear ,uo_out, data_out2, data_out3, data_out4, data_out5);
   
   parameter zero_input = 16'b0000000000000000;
-  input [7:0] data_in1;
+  input [7:0] ui_in;
   input [7:0] data_in2;
   input [7:0] data_in3;
   input [7:0] data_in4;
   input [7:0] data_in5;
   input clk, rst_n, ena, clear;
 
-  output  [15:0] data_out1;
+  output  [15:0] uo_out;
   output  [15:0] data_out2;
   output  [15:0] data_out3;
   output  [15:0] data_out4;
@@ -29,11 +29,11 @@ module tt_um_systolic_array(data_in1, data_in2, data_in3, data_in4, data_in5, cl
   wire[15:0] ps41, ps42, ps43, ps44, ps45;
   
 
-  PE PE11(data_in1, zero_input, clk, clear, e11, ps11);
+  PE PE11(ui_in, zero_input, clk, clear, e11, ps11);
   PE #(8'b00000010)PE21(data_in2, ps11, clk, clear, e21, ps21);
   PE #(8'b00000011)PE31(data_in3, ps21, clk, clear, e31, ps31);
   PE #(8'b00000100)PE41(data_in4, ps31, clk, clear, e41, ps41);
-  PE #(8'b00000101)PE51(data_in5, ps41, clk, clear, e51, data_out1);
+  PE #(8'b00000101)PE51(data_in5, ps41, clk, clear, e51, uo_out);
 
   PE PE12(e11, zero_input, clk, clear, e12, ps12);
   PE #(8'b00000010)PE22(e21, ps12, clk, clear, e22, ps22);

@@ -27,7 +27,7 @@ pinout:
   ui[4]: "data_in5"
   ui[5]: "clk"
   ui[6]: "clear"
-  ui[7]: ""
+  ui[7]: "ena"
 
   # Outputs
   uo[0]: "data_out1"

@@ -15,8 +15,8 @@ module tb ();
 
   // Wire up the inputs and outputs:
   reg clk;
-  reg clear;
-  // reg ena;
+  reg rst_n;
+  reg ena;
   reg [7:0] data_in1;
   reg [7:0] data_in2;
   reg [7:0] data_in3;
@@ -48,7 +48,8 @@ module tb ();
      .data_out3 (data_out3),   // Dedicated outputs
      .data_out4 (data_out4),   // Dedicated outputs
      .data_out5 (data_out5),   // Dedicated outputs
-     .clear    (clear),      // enable - goes high when design is selected
+     .rst_n   (rst_n),      // enable - goes high when design is selected
+     .ena      (ena)
       .clk    (clk),      // clock
   );
 
